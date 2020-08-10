@@ -99,8 +99,11 @@ def viewupload(request):
     if request.method=="POST":
 
         uploaded_file = request.FILES["document"]
+        
         print(uploaded_file.name)
         print(uploaded_file.size)
+        print(request.POST.get("texA"))
+
         
         fs = FileSystemStorage()
         url = fs.save(uploaded_file.name,uploaded_file)

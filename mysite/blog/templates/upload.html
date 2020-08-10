@@ -11,6 +11,9 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="document">
+        <br>
+        <input type="text" name = "texA">
+        <br>
         <button type="submit">Upload File</button>
     </form>
 
