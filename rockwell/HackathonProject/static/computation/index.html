@@ -48,7 +48,7 @@
                 <a href="{% url 'viewHomepage' %}"><img src="{% static 'computation/Rockwell logo_cropped.jpg' %}" alt="logo" height="50px" width="auto" /></a>
                 {% comment %} <img src="{% static 'computation/Rockwell logo_cropped.jpg' %}" alt="logo" /> {% endcomment %}
                 <div class="header-text"> 
-                <h1>24ToCode 2020 - Rockwell Imachination</h1>
+                    <h1>24ToCode 2020 - Rockwell Imachination</h1>
                 </div>              
             </div>
         </header>
@@ -62,7 +62,7 @@
         </section>
         <br>
 
-        <section class="machine-learning">
+        {% comment %} <section class="machine-learning">
 
             <div class="container">
 
@@ -74,6 +74,23 @@
 
                 <div class="ML-tree" style="border-color:lightgray;background-image: url({% static 'computation/Rockwell logo_cropped.jpg' %});min-height: 500px;">
                     
+                </div>
+            </div>
+
+        </section>  {% endcomment %}
+
+        <section class="Architecture">
+
+            <div class="container">
+
+                <div class="Architecture-header">
+                    <h2>Architecture</h2>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="Architecture-tree" style="border-color:lightgray;">
+                    <img src="{% static 'computation/arch.jpg' %}" alt="" style="width:60%;height:18%;padding-left:25%"> 
                 </div>
             </div>
 
@@ -176,7 +193,7 @@
             <div class="container">
 
                 <div class="ML-header">
-                    <h2>Machine Learning</h2>
+                    <h2> Staff Assignment Optimization</h2>
                     <br>
                     <br>
                 </div>
@@ -193,6 +210,12 @@
                     {% block nspDjango_result %}
                         <p> This will show the result of nurse scheduling problem.</p>
                     {% endblock nspDjango_result %}
+
+                    {% block sSchedOpts %}
+                        <p> This will show result of staff scheduling optimization problem</p>
+                    {% endblock sSchedOpts %}
+
+
                 </div>
             </div>
 

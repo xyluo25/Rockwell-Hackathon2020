@@ -7,6 +7,8 @@ from django.core.files.storage import FileSystemStorage
 from HackathonProject.code_need.GanttChart_original import ganttChart
 from HackathonProject.code_need.sweetvis_downtime import createSweetviz
 from HackathonProject.code_need.TablePreparation import create_ML_Table
+# from HackathonProject.code_need.staff_optimation import staff_assig_main
+from HackathonProject.code_need.staffAssignmentApplication import staff_assig_main
 
 
 from HackathonProject.code_need.nurseSchedulingProblem import nspDjango
@@ -84,7 +86,8 @@ def viewComputation(request):
                 
                 context["sweetViz"] = createSweetviz(file_,outputName = "Rockwell_sweetViz_1.html")
                 
-                context["nurseSchedulingProblem"] = nspDjango().main()[1]
+                # context["nurseSchedulingProblem"] = nspDjango().main()[1]
+                context["staff_SchedulingOpt"] = staff_assig_main(file_).final_result_table()
                 
                 url = None
                 

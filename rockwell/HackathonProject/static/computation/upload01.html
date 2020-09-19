@@ -101,3 +101,10 @@
         {% autoescape off %}{{ nurseSchedulingProblem|safe }}{% endautoescape %}
     {% endif %}
 {% endblock nspDjango_result %}
+
+
+{% block sSchedOpts %}
+    {% if staff_SchedulingOpt %}
+        {% autoescape off %}{{ staff_SchedulingOpt|safe }}{% endautoescape %}
+    {% endif %}
+{% endblock sSchedOpts %}

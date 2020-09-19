@@ -21,8 +21,44 @@ body
     float: left;
 }
 
-.header-text
+.header-text {
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+    border-radius: 25px;
+}
+
+/* .header-text
 {
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+    border-radius: 25px;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+
     background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
     
     -webkit-background-size: cover;
@@ -30,14 +66,13 @@ body
     -o-background-size: cover;
     background-size: cover;
     
-    
     min-width: 35%;
     min-height: 50px;
     float: inline;
     margin-left: 325px;
 
     transform: scaleX(-1);
-}
+} */
 
 .header h1
 {
