@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- add icon link -->
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.rockwellautomation.com/etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/favicons/favicon-16x16.png">
+    
+        <!--CSS Style-->
+        <title>24ToCode Animation Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'animation/AnimationPage_style.css' %}"> 
+        
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="{% url 'viewHomepage' %}"><img src="{% static 'images/Rockwell logo_cropped.jpg' %}" alt="logo" height="50px" width="auto" /></a>
+                </div>
+
+                <div class="header-text">
+                    <h1>24ToCode 2020</h1>
+                </div>              
+            </div>
+        </header>
+
+        <div class="bg" style="width:98%">
+            <img src="{% static 'images/Plant_worker-removebg-preview (2).png' %}" class="worker" height="40%">
+        </div>
+    </body>
+</html>

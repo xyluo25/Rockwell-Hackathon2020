@@ -28,6 +28,40 @@
     {% endif %}
 
     
+{% endblock %}
 
 
+{% block content_test %}
+    {% if selectValues %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label> Choose Your Machine: </label>
+            <select name="selection_test" id="selection_test">
+                {% for i in selectValues %}
+                    <option value={{ i }}> {{ i }} </option>
+                {% endfor %}
+            </select>
+            <br><br> 
+            <label>Choose machine operation line: </label>
+            <select name="selection" id="selection">
+                {% for i in selectValues %}
+                    <option value={{ i }}> {{ i }} </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Run Model</button>
+        </form>
+    {% endif %}
+
+    {% if selectionResult %}
+        <h2> This is the select result {{ selectionResult}} </h2>
+    {% endif %}
+    
+    {% if machineLearning %}
+        {% autoescape off %}{{ machineLearning|safe }}{% endautoescape %}
+    {% endif %}
+
+    {% if ganttChart %}
+        {% autoescape off %}{{ ganttChart|safe }}{% endautoescape %}
+    {% endif %}
+    
 {% endblock %}

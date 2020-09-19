@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+
+html
+{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+}
+
+.header
+{
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+    min-width: 1269px;
+    min-height: 50px;
+
+    height: 100px;
+    background-color: #EBECF0;
+    position: fixed;
+    min-width: 100%;
+    overflow: visible;
+}
+
+.header-logo
+{
+    float: left;
+}
+
+.header-text
+{
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+    border-radius: 25px;
+}
+
+.header h1
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Barlow';
+    color: whitesmoke;
+    
+    padding-right: 10%;
+    padding-top: .5%;
+    text-align: end;
+    margin: 0;
+
+    transform: scaleX(-1);
+}
+
+.navbar
+{
+    background-color: #555;
+    background-position: 0;
+    color: #fff;
+}
+
+.container
+{
+    width: 90%;
+    margin: auto;
+
+    padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+.text {
+  position: absolute;
+  margin-left: 0;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  z-index: -1;
+}
+
+
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 150%;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: whitesmoke;
+}
+
+.belize {
+  color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.showcase
+{
+    /*background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+
+    position:relative top 110px;
+    overflow:hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height:50vw;
+    max-height: 96%;
+    min-width:300px;
+    color:#eee;
+}
+
+.showcase:after
+{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-3;
+   background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+   background-image:url('https://rockwellautomation.com/etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/backgrounds/bugoverlay.svg');
+   background-size: 100%;
+   animation: grow1 10s linear 10ms infinite;
+   animation-direction: alternate;
+   transition:all 0.4s ease-in-out;
+}
+
+.showcase:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0); backface-visibility: hidden;
+    scale:  1.0, 1.0;
+      transform: translateZ(0);
+    background:#1B2030 url(https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg) 
+    50% 0 no-repeat;
+    background-size: 100%;
+    background-attachment:fixed;
+    animation: grow 5s linear 10ms infinite;
+    transition:all 0.4s ease-in-out;
+    z-index: -4
+}
+
+@keyframes grow
+{
+    50% { transform: scale(1.0, 1.2) translateY(-5%) }
+}
+
+@keyframes grow1
+{
+   100% { transform: scale(1.2, 1.2); }
+   0%   { transform: scale(1.0, 1.0); }
+}
+
+.showcase-text
+{
+    font-size: 3.5rem;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    color: whitesmoke;
+    
+    padding-top: 0%;
+    padding-left: 30%;
+    line-height: 80%;
+    word-spacing: 20px;
+
+    width: 100%;
+    text-align: center;
+}
+
+/*.showcase ul
+{
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    line-height: 8em;
+    padding: 0;
+    padding-bottom: 5%;
+}
+*/
+ul
+{
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    line-height: 8em;
+    padding: 0;
+    padding-bottom: 5%;
+}
+
+.navigation
+{
+    background-color: #EBECF0;
+    padding-top:5%;
+}
+
+button 
+{
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    min-width: 40%;
+
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    padding: 16px;
+    background-color: #EBECF0;
+    
+    /*background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 768px;*/
+    
+
+    color:#61677C;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover
+{
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+button:active
+{
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.footer {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.footer_bottom-bar, .footer_bottom-bar_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer_bottom-bar {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color:#EBECF0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.footer_bottom-bar_inner {
+    background: #cd163f;
+    background: linear-gradient(260deg,#cd163f 29%,#f58025 76%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: 4.313rem;
+    padding: 0 4rem;
+    color: #fff;
+    background-image: url(https://www.rockwellautomation.com//etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/backgrounds/footer_bottom_shape_mobile.svg);    
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.copyright{
+    font-family: 'Barlow',Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    letter-spacing: .5px;
+    position: relative;
+    top: -4px;
+
+    float: left;
+}
+
+.logo_separator {
+    display: none;
+    position: relative;
+    top: 1px;
+    margin: 0 1.25rem 0 1rem;
+    width: 1px;
+    border-radius: 1px;
+    height: 1.125rem;
+    background-color: #fff;
+}
+
+.footer_logo
+{
+    width: 110px;
+    height: auto;
+    float: right;
+}

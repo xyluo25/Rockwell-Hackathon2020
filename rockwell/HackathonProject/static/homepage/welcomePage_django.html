@@ -1,0 +1,15 @@
+<!--
+ *  Created Date: Sunday, September 13th 2020 
+ *  Contact Info: luoxiangyong01@gmail.com 
+ *  Author/Copyright: Mr. Xiangyong Luo 
+-->
+
+{% extends 'TestPageJS.html' %}
+{% comment %} {% extends "WelcomePage.html" %} {% endcomment %}
+
+
+{% block animation %}
+    {% if ani%}
+        <a href="{% url 'viewAnimation' %}"><button class="red" type="button"><i class="icon ion-md-lock"></i> ANIMATION</button></a>
+    {% endif%}
+{% endblock animation %}

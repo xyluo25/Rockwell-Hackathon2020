@@ -1,18 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+
+from blog.code_need.blogAPP_pyecharts import bar_line,temp_bar
+from blog.models import IOpf_formaterMonth,Post
+from blog.code_need.machineLearningModel import temp_machinelearning
+from blog.code_need.machineSchedulingGanttChart import Hackathon_GanttChart
+
 import pandas as pd
 import os
-from django.conf import settings
-from .models import Post,IOpf_formaterMonth
+import numpy as np
+
+
 
 import plotly.graph_objs as go
 import plotly.io as pio
-import numpy as np
-from django.core.files.storage import FileSystemStorage
+
 
 from pyecharts import options as opts
 from pyecharts.charts import Bar, Line
-import numpy as np
+from pyecharts.commons.utils import JsCode
 from pyecharts.globals import ThemeType
 
 
@@ -94,6 +102,60 @@ def viewplotlyfigure(request):
     return HttpResponse(fig.to_html())
 
 def viewupload(request):
+    context = {}
+    
+    if request.method=="POST":
+        try:
+            if request.FILES["document"]:
+                
+                uploaded_file = request.FILES["document"]
+                
+                print(uploaded_file.name)
+                print(uploaded_file.size)
+                print(request.POST.get("texA"))
+                
+                
+                fs = FileSystemStorage()
+                url = fs.save(uploaded_file.name,uploaded_file)
+                    
+                file_ = os.path.join(settings.BASE_DIR,r"blog\media\%s"%url)
+                print("Files_Full",file_)
+                df = pd.read_excel(file_)
+                
+                print("Columns:",df.columns)
+                
+                context["url"] = fs.url(url)  #bar.render_embed()
+                
+                context["htmlstr"] = df.to_dict()
+
+                
+                context["pyecharts"] = temp_bar()
+                #context["pyecharts"] = c.render_embed()
+                
+                #print("This is temp_bar",temp_bar())
+            
+            
+                tem_lst = []
+                tem_lst.append(file_)
+                
+                Data_in,Data_out = IOpf_formaterMonth(tem_lst).concatDataFrame()
+
+                context["barEcharts"] = bar_line(Data_in,Data_out)
+            
+                context["selectValues"] = ["item1","item2","item3","item4"]
+        except:  
+            if request.POST.get("selection"):
+                print(request.POST.get("selection"))
+                context["selectionResult"] = request.POST.get("selection")
+                
+                context["machineLearning"] = temp_machinelearning()
+                
+                context["ganttChart"]  = Hackathon_GanttChart(save2db_path=None).generate_gantt()
+            
+        
+    return render(request,"upload.html",context)
+
+def viewupload_00(request):
     context = {}
     
     if request.method=="POST":
@@ -235,5 +297,3 @@ def viewupload(request):
         
         
     return render(request,"upload.html",context)
-
-

@@ -1,0 +1,96 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+
+    height: 110px;
+    min-width: 100%;
+    background-color: #EBECF0;
+    position: fixed;
+    overflow: visible;
+}
+
+.header-logo
+{
+    float: left;
+}
+
+.header-text
+{
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+}
+
+.header h1
+{
+    font-family:  'Barlow', "Comic Sans MS", cursive, sans-serif;
+    color: whitesmoke;
+    
+    padding-right: 10%;
+    padding-top: .5%;
+    text-align: end;
+    margin: 0;
+
+    transform: scaleX(-1);
+}
+
+.container
+{
+    width: 90%;
+    margin: auto;
+
+    padding-top: 30px;
+}
+
+.bg
+{
+    position: relative;
+    background-position: center;
+
+    background: #EBECF0 url('/static/images/production_line.jpeg');
+    height: 100vh;
+    /* background-size: cover; */
+    background-size: auto;
+    z-index: -2;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: animate 500s linear infinite;
+}
+
+@keyframes animate
+{
+    from
+    {
+        background-position: 0 0;
+    }
+
+    to 
+    {
+        background-position: 14125% 0;
+    }
+}
+
+.worker
+{
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+}

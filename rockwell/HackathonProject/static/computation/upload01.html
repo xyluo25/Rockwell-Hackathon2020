@@ -1,0 +1,103 @@
+<!--
+ *  Created Date: Sunday, August 30th 2020 
+ *  Contact Info: luoxiangyong01@gmail.com 
+ *  Author/Copyright: Mr. Xiangyong Luo 
+-->
+
+{% extends "index.html" %}
+
+{% block content %}
+    {% comment %} <h2>This is a page to upload data and handling data page</h2> {% endcomment %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <hr>
+        <b>&nbsp;&nbsp;  Upload Your File: </b>
+       
+        &nbsp;&nbsp;
+        <input type="file" name="document" multiple>
+
+        &nbsp;&nbsp; 
+        <button type="button" style="background-color:lightskyblue;">First Parameter:</button>
+        <input type="text" name = "texA">
+
+        &nbsp;&nbsp;
+        <button type="button" style="background-color:lightskyblue;">Second Parameter:</button>
+        <input type="text" name = "texB">
+
+
+        {% comment %} &nbsp;&nbsp;
+        <button type="button" style="background-color:lightskyblue;">Third Parameter:</button>
+        <input type="text" name = "texC"> {% endcomment %}
+
+        <br>
+        <br>
+        
+        &nbsp;&nbsp;
+        <button type="submit">Running Imachination</button>
+        <hr>
+    </form>
+
+    {% comment %} {% if url %}
+        <p>This is something inside the context: <a href="{{ url }}">{{ url }}</a></p>
+        
+        {% autoescape off %}{{ barEcharts|safe }}{% endautoescape %}
+    {% endif %} {% endcomment %}
+
+{% endblock content %}
+
+
+{% block content_test %}
+    {% if selectValues %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label> Choose Your Machine: </label>
+            <select name="selection_test" id="selection_test">
+                {% for i in selectValues %}
+                    <option value={{ i }}> {{ i }} </option>
+                {% endfor %}
+            </select>
+            <br><br> 
+            <label>Choose machine operation line: </label>
+            <select name="selection" id="selection">
+                {% for i in selectValues %}
+                    <option value={{ i }}> {{ i }} </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Run Model</button>
+        </form>
+    {% endif %}
+
+    {% if selectionResult %}
+        <h2> This is the select result {{ selectionResult}} </h2>
+    {% endif %}
+    
+{% endblock content_test %}
+
+<!--show gantt chart  -->
+{% block ganttChart_test %}
+    {% if ganttChart %}
+        {% autoescape off %}{{ ganttChart|safe }}{% endautoescape %}
+        <a href="{% url 'viewComputation' %}"> <button> <b> Back to Home Page</b> </button> </a>
+    {% endif %}
+{% endblock ganttChart_test %}
+
+<!-- show sweetviz  --> 
+{% block sweetViz_Rockwell %}
+    {% if sweetViz %}
+        {% autoescape off %}{{ sweetViz|safe }}{% endautoescape %}
+    {% endif %}
+{% endblock sweetViz_Rockwell %}
+
+
+<!--show machine learning  -->
+{% block machinelearning %}
+    {% if machineLearning %}
+        {% autoescape off %}{{ machineLearning|safe }}{% endautoescape %}
+    {% endif %}
+{% endblock machinelearning %}
+
+{% block nspDjango_result %}
+    {% if nurseSchedulingProblem %}
+        {% autoescape off %}{{ nurseSchedulingProblem|safe }}{% endautoescape %}
+    {% endif %}
+{% endblock nspDjango_result %}

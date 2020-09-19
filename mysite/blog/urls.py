@@ -23,7 +23,9 @@ urlpatterns = [
     path("viewCSV_webupload/",views.viewCSV_webupload,name="viewCSV_webupload"),
     path("viewcharts/",views.viewcharts,name="viewcharts"),
     path("viewplotlyfigure/",views.viewplotlyfigure,name="viewplotlyfigure"),
-    path("viewupload/",views.viewupload,name="viewupload")
+    path("viewupload/",views.viewupload,name="viewupload"),
+    path("viewupload_00/",views.viewupload_00,name="viewupload_00")
+    
 ]
 
 if settings.DEBUG:

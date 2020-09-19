@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+    background-color: #EBECF0;
+}
+
+.header
+{
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+    min-width: 1269px;
+    min-height: 50px;
+
+    height: 100px;
+    background-color: #EBECF0;
+    position: fixed;
+    min-width: 100%;
+    overflow: visible;
+    z-index: 4;
+}
+
+.header-logo
+{
+    float: left;
+}
+
+.header-text
+{
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+    border-radius: 25px;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+}
+
+.header h1
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Barlow';
+    color: whitesmoke;
+    
+    padding-right: 10%;
+    padding-top: .5%;
+    text-align: end;
+    margin: 0;
+
+    transform: scaleX(-1);
+}
+
+.container
+{
+    width: 90%;
+    margin: auto;
+
+    padding-top: 25px;
+}
+
+
+
+
+
+
+
+.header2{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height:80vw;
+    max-height: 96%;
+    min-width:300px;
+    color:#eee;
+  }
+  .header2:after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-1;
+   background-image:url('https://rockwellautomation.com/etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/backgrounds/bugoverlay.svg');
+    background-size: cover;
+  }
+  .header2:before{
+    margin-bottom: 30px;
+    content:"";
+    width:100%;
+    height:200%;
+    position:absolute;
+    top:0;
+    left:0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0); backface-visibility: hidden;
+      transform: translateZ(0);
+    background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
+    background-size:100%;
+    background-attachment:fixed;
+    /*animation: grow 60s  linear 10ms infinite;*/
+    transition:all 0.4s ease-in-out;
+    z-index:-2
+  }
+  .header2 a{
+    color:#eee
+  }
+
+  .info{
+    width:100%;
+    padding:22% 10% 0 10%;
+    text-align:center;
+    text-shadow:0 2px 3px rgba(0,0,0,0.2);
+    font-family: 'Barlow';
+  }
+
+  .h4{
+    font-size:0.7em
+  }
+  .meta{
+    font-style:italic;
+  }
+  @keyframes grow{
+    0% { transform: scale(1) translateY(0px)}
+    50% { transform: scale(1.2) translateY(-400px)}
+  }
+
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+  }
+
+/*
+  body, html {
+     font-family: 'Roboto Slab', serif;
+      margin: 0;
+    width: 100%;
+  height: 100%;
+      padding: 0;
+  }
+  
+  body {
+    background-color: #D2DBDD;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+*/
+
+.MembersInfo
+{
+    display: flex;
+    -webkit-justify-content: center;
+    padding-top: 60px;
+    font-family: 'Barlow';
+}
+
+.cards 
+{
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+  
+.card--1 .card__img, .card--1 .card__img--hover 
+{
+    
+    background-image: url('Gino_Maulini.JPG');
+}
+  
+.card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('Gravity.jpg');
+}
+
+.card--3 .card__img, .card--3 .card__img--hover 
+{
+    background-image: url('Roy_Luo.jpg');
+}
+
+.card--4 .card__img, .card--4 .card__img--hover 
+{
+    background-image: url('Simon.jpg');
+}
+
+.card__img {
+visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+
+}
+
+.card__img--hover {
+transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+position: absolute;
+    height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+
+}
+.card {
+margin-right: 50px;
+transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+background-color: #fff;
+    width: 33.3%;
+position: relative;
+border-radius: 12px;
+overflow: visible;
+box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.3);
+z-index: -0;
+}
+.card:hover {
+box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.3);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+background-color: #fff;
+border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+
+.card__membername {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+color: #868686;
+}
+
+.card__memberinfo {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+.ProjectInfo
+{
+    display: flex;
+    -webkit-justify-content: center;
+    font-family: 'Barlow';
+}
+
+.content1{  
+    padding:5% 10%;
+    padding-top: 0%;
+    text-align:justify
+  }
+

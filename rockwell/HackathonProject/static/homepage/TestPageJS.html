@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- add icon link -->
+        <!--<link rel = "icon" href ="images/head icon.jpg" 
+        type = "image/x-icon"> -->
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.rockwellautomation.com/etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/favicons/favicon-16x16.png">
+    
+        <!--CSS Style-->
+        <title>24ToCode Welcome Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'homepage/TestPageJS_style.css' %}"> 
+        
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+
+        
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-logo">
+                    {% comment %} <a href="TestPageJS.html"><img src="images\Rockwell logo_cropped.jpg" alt="logo" height="50px" width="auto" /></a> {% endcomment %}
+                    <a href="{% url 'viewHomepage' %}"><img src="{% static 'images/Rockwell logo_cropped.jpg' %}" alt="logo" height="50px" width="auto" /></a>
+                </div>
+
+                <div class="header-text">
+                    <h1>24ToCode 2020</h1>
+                </div>              
+            </div>
+        </header>
+
+        <section class="showcase">
+            <div class="showcase-text">
+              <div class="text">
+                <p>ROCKWELL</p>
+                <p>
+                  <span class="word wisteria">AUTOMATION</span>
+                  <span class="word belize">IMACHINATION</span>
+                </p>
+              </div>
+            </div>    
+        </section>
+        
+        <div class="navigation">
+            <ul>
+                <li>
+                    {% comment %} <button class="red" type="button"><i class="icon ion-md-lock"></i> ABOUT</button> {% endcomment %}
+                    <a href="{% url 'viewAbout' %}"><button class="red" type="button"><i class="icon ion-md-lock"></i> ABOUT</button></a>
+                </li>
+                <li>
+                    {% block animation %}
+                        <p>Animation page display </p>
+                    {% endblock animation %}
+                    {% comment %} <a href="AnimationPage.html"><button class="red" type="button"><i class="icon ion-md-lock"></i> ANIMATION</button></a> {% endcomment %}
+                </li>
+                <li>
+                    {% comment %} <a href="index.html"><button class="red" type="button"><i class="icon ion-md-lock"></i> COMPUTATION</button></a> {% endcomment %}
+                    <a href="{% url 'viewComputation' %}"><button class="red" type="button"><i class="icon ion-md-lock"></i> COMPUTATION</button></a>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer_bottom-bar">
+                <div class="footer_bottom-bar_inner">
+                    <div class="copyright">Stolen from Rockwell Automation, Inc.</div>
+                    <div class="logo_separator"></div>
+                    <div class="footer_logo">
+                        <img src="https://www.rockwellautomation.com/content/dam/rockwell-automation/sites/images/logos/2019_Logo_rgb_RA_Bug-LeftText_White.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script type="text/javascript" src="{% static 'homepage/Test_JS.js' %}"></script>
+</html>

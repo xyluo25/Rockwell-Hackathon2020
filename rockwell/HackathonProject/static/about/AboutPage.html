@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- add icon link -->
+        <!--<link rel = "icon" href ="images/head icon.jpg" 
+        type = "image/x-icon"> -->
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.rockwellautomation.com/etc.clientlibs/rockwell-aem-base/clientlibs/clientlib-base/resources/favicons/favicon-16x16.png">
+    
+        <!--CSS Style-->
+        <title>24ToCode Welcome Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'about/AboutPage_style.css' %}"> 
+        
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+
+        <style>
+            .card--1 .card__img, .card--1 .card__img--hover 
+            {
+                
+                background-image: url({% static 'images/Gino_Maulini.JPG' %});
+            }
+            
+            .card--2 .card__img, .card--2 .card__img--hover {
+                background-image: url({% static 'images/Gravity.jpg' %});
+            }
+
+            .card--3 .card__img, .card--3 .card__img--hover 
+            {
+                background-image: url({% static 'images/Roy_Luo.jpg' %});
+            }
+
+            .card--4 .card__img, .card--4 .card__img--hover 
+            {
+                background-image: url({% static 'images/Simon.jpg' %});
+            }
+        </style>
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="{% url 'viewHomepage' %}"><img src="{% static 'images/Rockwell logo_cropped.jpg' %}" alt="logo" height="50px" width="auto" /></a>
+
+                    {% comment %} <a href="TestPageJS.html"><img src="images\Rockwell logo_cropped.jpg" alt="logo" height="50px" width="auto" /></a> {% endcomment %}
+                </div>
+
+                <div class="header-text">
+                    <h1>24ToCode 2020</h1>
+                </div>              
+            </div>
+        </header>
+
+        <div class="header2">
+            <div class="sides">
+              <a href="#" class="logo">BLOG</a>
+            </div>
+            <div class="sides"> <a href="#" class="menu"> </a></div>
+            <div class="info">
+              <h1 style="color:red;font-size:60px;">SCHEDULE OPTIMIZATION AND MACHINE LEARNING</h1>
+            </div>
+        </div>
+
+        <div class="MembersInfo">
+            <h1>WHO WE ARE</h1>
+        </div>
+
+          <section class="cards">
+            <!--Gino Card-->
+            <article class="card card--1">
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__membername"> <h1>Gino Maulini</h1> </span>
+                    <h4 class="card__memberinfo"> "He likes to answer the questions about how we go from a bunch of stones to the world of phones and computers"</h4>
+                    <p>IT Associate <br>Rockwell Automation</p>
+                    <p>Bachelors in Electronic Engineering at University of Florida</p>
+                </div>
+            </article>
+
+            <!--Meiling Card-->
+            <article class="card card--2">
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__membername"> <h1>Meiling He </h1></span>
+                    <h4 class="card__memberinfo"> "Think fast and do slowly"</h4>
+                    <br>
+                    <br>
+                    <br>
+                    <p>IT Associate <br>Rockwell Automation</p>
+                    <p>Ph.D. Candidate in Electronic Engineering at UW-Milwaukee</p>
+                </div>
+            </article> 
+            
+
+            <!--Roy Card-->
+            <article class="card card--3">
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__membername"> <h1>Xiangyong (Roy) Luo</h1></span>
+                    <h4 class="card__memberinfo">"Be Creative, motivational, positive!"</h4>
+                    <br>
+                    <br>
+                    <p>TA & RA <br>University of Wisconsin-Milwaukee</p>
+                    <p>Ph.D. Candidate in Civil Engineering at UW-Milwaukee</p>
+                </div>
+            </article>
+
+            <!--Simon Card-->
+            <article class="card card--4">
+                <div class="card__img"></div>
+                <a href="#" class="card_link">
+                    <div class="card__img--hover"></div>
+                </a>
+                <div class="card__info">
+                    <span class="card__membername"> <h1>Simon J. Vancina</h1></span>
+                    <h4 class="card__memberinfo">"Just an electrical engineer pretending he can code"</h4>
+                    <br>
+                    <br>
+                    <p>Firmware Enginer <br>Rockwell Automation</p>
+                    <p>Master in Electronic Engineering at UW-Milwaukee</p>
+                </div>
+            </article>
+                  
+        </section>
+
+        <div class="container"><hr width="80%"></div>
+        <br>
+        <br>
+
+        <div class="ProjectInfo">
+            <h1>WHAT THE PROJECT IS ABOUT</h1>
+        </div>
+
+        <section class="content1">
+            <p></p>
+        </section>
+    </body>
+</html>
