@@ -1,0 +1,282 @@
+
+body
+{
+    margin: 0;
+}
+
+.section{
+    height:auto;
+}
+
+.header
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-width: 1269px;
+    min-height: 50px;
+}
+
+.header img
+{
+    float: left;
+    width: auto;
+    height: 50px;
+}
+
+.header-text
+{
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+    border-radius: 25px;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+    padding-right: 15px;
+
+    /* transform: scaleX(-1); */
+
+    /* background-image: url('header back2.jpg');
+    padding-right: 20px;
+    width: 80%;
+    height: 50px;
+    float: right; */
+}
+
+.header h1
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: whitesmoke;
+    text-align: end;
+    margin: 0;
+    height: 50px;
+}
+
+
+/* .header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-width: 1269px;
+    min-height: 50px;
+
+    height: 100px;
+    background-color: #EBECF0;
+    position: fixed;
+    min-width: 100%;
+    overflow: visible;
+} */
+
+/* .header-logo {
+    float: left;
+} */
+
+/* .header-text {
+    background-image: url('https://www.rockwellautomation.com//content/dam/rockwell-automation/sites/images/backgrounds/backTexture_RARedOrange.svg');
+    background-position: bottom;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    min-width: 35%;
+    min-height: 50px;
+    float: inline;
+    margin-left: 325px;
+
+    transform: scaleX(-1);
+    border-radius: 25px;
+} */
+
+/* .header h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Barlow';
+    color: whitesmoke;
+
+    padding-right: 10%;
+    padding-top: .5%;
+    text-align: end;
+    margin: 0;
+
+    transform: scaleX(-1);
+}  */
+
+
+.navbar
+{
+    background-color: #555;
+    background-position: 0;
+    color: #fff;
+}
+
+.section
+{
+    min-height: 400px;
+    position: relative;
+}
+
+.showcase
+{
+    /* background-image: url('showcase3.png'); */
+    background-color: rgb(167, 56, 56);
+    min-height: 8vh;
+    background-position: center ;
+}
+
+.optimization 
+{
+    height: fit-content;
+}
+
+.container
+{
+    width: 98%;
+    margin: auto;
+    object-fit: cover;
+    min-height: inherit;
+    /* padding: 2%; */
+}
+
+.container_OR {
+    width: 98%;
+    margin: auto;
+    /* padding: 2%; */
+}
+
+.container h5
+{
+    font-size: xx-large;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: left;
+    margin: 0;
+    /*line-height: 30vh;*/
+    vertical-align: middle;
+    color: whitesmoke;
+    
+}
+
+h2
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    line-height: 20px;
+    
+}
+
+.inputs
+{
+    float: center;
+    width: 40%;
+    margin-left: 30%;
+    min-height: 150px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.chartsResult
+{
+    float: center;
+    width: 100%;
+    /* height: fit-content; */
+    /* height: 400px; */
+    /* position: relative; */
+    /* object-fit: contain; */
+    min-height: 400px;
+    
+    /* max-width: 100%; */
+
+    /* max-height: 350px; */
+
+
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.DataType 
+{
+    padding-left: 30%;
+}
+
+.DataInputs
+{
+    padding-left: 30%;
+}
+
+.OPT_graph
+{
+    float: right;
+    width: auto;
+    margin-right: 5%;
+
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.sweet
+{
+    width: 100%;
+    min-height: 300px;
+    /* margin-left: 10%; */
+    float: center;
+    position: relative;
+    height: fit-content;
+    /* display: inline-block; */
+    /* padding: 2%; */
+
+    border-color:lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ML-tree
+{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    /* margin-left: 10%; */
+    float: center;
+    position: relative;
+    display: -webkit-box;
+    /* padding: 2%; */
+    /* object-fit: inherit; */
+
+    border-color:rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ML-form
+{
+    /* float: right; */
+    /* margin-right: 10%; */
+    /* min-height: 300px; */
+    /* padding-top: 10%; */
+    background-color: lightgray;
+
+}
+
+.Architecture-tree {
+    float: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* position: relative; */
+    /* padding-left: 50%; */
+    
+
+    min-height: 300px;
+    padding-bottom: 8%;
+}

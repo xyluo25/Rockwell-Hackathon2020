@@ -1,4 +1,4 @@
-from django.shortcuts import render,render_to_response
+from django.shortcuts import render    #,render_to_response
 from django.http import HttpResponse,HttpResponseNotFound,Http404
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
